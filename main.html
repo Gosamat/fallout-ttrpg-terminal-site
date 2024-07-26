@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Retro Futuristic UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="old-crt-monitor">
+    <div class="retro-container scanline-effect">
+      <header>
+        <h1>Fallout TTRPG Terminal</h1>
+        <nav role="navigation">
+          <ul>
+            <li><a href="#screen-1">Dwellers</a></li>
+            <li><a href="#screen-1">Vaults</a></li>
+            <li><a href="#screen-1">Login/SignUp </a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="screen-1">
+          <article>
+            <header>
+              <h2>Dwellers</h2>
+            </header>
+            <div class="content">This is the Dwellers page</div>
+            <figure>
+              <img src="" alt="alt text for illustration" />
+            </figure>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>
+          @2024 Fallout TTRPG Terminal is a small project I'm making so me and
+          my friends can have a website to use for our Fallout TTRPG sessions.
+          It's a work in progress, but I'm having fun making it.
+        </p>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          const main = document.querySelector("main");
+
+          if (targetElement) {
+            main.scrollTo({
+              top: targetElement.offsetTop - main.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
